@@ -1,21 +1,35 @@
 class RestaurantsController < ApplicationController
 
 def new
+  @restaurant = Restaurant.new
 end
 
 def show
+  @restaurant = Restaurant.find(params[:id])
 end
 
 def create
+  @restaurant = Restaurant.new(restaurant_params)
+  @restaurant.save
 end
 
-def edit
+def index
+  @restaurant = Restaurant.all
 end
 
-def update
-end
+# def edit
+# end
 
-def destroy
+# def update
+# end
+
+# def destroy
+# end
+
+private
+
+def restaurant_params
+  params.require(:restaurant).permit(:name, :address, :rating)
 end
 
 end
