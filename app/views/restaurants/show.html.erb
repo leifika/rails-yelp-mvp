@@ -1,1 +1,5 @@
-<h1>FUCK YOU</h1>
+<h1><%=@restaurant.name %></h1>
+<% @reviews.each do |review|%>
+<p>Rating: <%=link_to review.rating%></p>
+<p>Comments: <%=review.content%></p>
+<% end %>

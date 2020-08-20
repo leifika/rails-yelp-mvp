@@ -5,14 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# CATEGORIES = ["Chinese", "Italian", "Japanese", "French", "Belgian"]
+CATEGORIES = ["Chinese", "Italian", "Japanese", "French", "Belgian"]
+RATING =[1,2,3,4,5]
 
 
-# 5.times do
-# Restaurant.create(
-#   name:Faker::Restaurant.name,
-#   address:Faker::Address.city,
-#   phone_number:Faker::PhoneNumber.cell_phone,
-#   category:CATEGORIES.sample
-# )
-# end
+5.times do
+Restaurant.create(
+  name:Faker::Restaurant.name,
+  address:Faker::Address.city,
+  phone_number:Faker::PhoneNumber.cell_phone,
+  category:CATEGORIES.sample
+)
+end
+
+5.times do
+Review.create(
+  content:Faker::Restaurant.review
+)
+end

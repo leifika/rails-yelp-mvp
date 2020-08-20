@@ -6,6 +6,7 @@ end
 
 def show
   @restaurant = Restaurant.find(params[:id])
+  @reviews = @restaurant.reviews
 end
 
 def create
@@ -14,7 +15,7 @@ def create
 end
 
 def index
-  @restaurant = Restaurant.all
+  @restaurants = Restaurant.all
 end
 
 # def edit

@@ -1,2 +1,4 @@
 <h1>the restaurant - INDEX</h1>
-<%= @restaurant.all %>
+<% @restaurants.each do |restaurant|%>
+<%= link_to restaurant.name, restaurant_path(restaurant)  %>
+<% end %>
