@@ -18,8 +18,8 @@ Restaurant.create(
 )
 end
 
-5.times do
-Review.create(
-  content:Faker::Restaurant.review
-)
-end
+# 5.times do
+# Review.create(
+#   content:Faker::Restaurant.review
+# )
+# end
